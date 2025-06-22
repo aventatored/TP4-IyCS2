@@ -32,7 +32,7 @@ test("No permite registrar dos usuarios con el mismo email", () => {
 
 //Test 3: No permite registrar un usuario si el mail no tiene formato válido
 test("No permite registrar usuario si el email tiene formato inválido", () => {
-  const result = registrarUsuario("Andrés", "no-es-mail", "pass123");
+  const result = registrarUsuario("Andrés", "no-es-mail", "contraseña123");
   console.log(result.mensaje);
   expect(result.success).toBe(false);
   expect(result.mensaje).toMatch(/formato de email inválido/i);
