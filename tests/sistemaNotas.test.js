@@ -23,8 +23,8 @@ test("Registra un usuario nuevo correctamente", () => {
 
 // Test 2: No permite registrar dos usuarios con el mismo email
 test("No permite registrar dos usuarios con el mismo email", () => {
-  registrarUsuario("Paula", "paula@mail.com", "1234");
-  const result = registrarUsuario("Otro", "paula@mail.com", "5678");
+  registrarUsuario("Paula", "paula1@mail.com", "1234");
+  const result = registrarUsuario("Otro", "paula1@mail.com", "5678");
   console.log(result.mensaje);
   expect(result.success).toBe(false);
   expect(result.mensaje).toMatch(/email ya registrado/i);
